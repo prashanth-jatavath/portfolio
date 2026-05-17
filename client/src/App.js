@@ -2,84 +2,173 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container">
-
+    <div className="App">
+      {/* Navbar */}
       <nav className="navbar">
-        <h2>Prashanth Portfolio</h2>
+        <h2 className="logo">Prashanth Portfolio</h2>
 
-        <div>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <ul className="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
 
+      {/* Hero Section */}
       <section className="hero">
-        <h1>Hi, I'm Prashanth</h1>
+        <div className="hero-content">
+          <h1>Hi, I'm Prashanth</h1>
 
-        <p>
-          Full Stack Developer | B.Tech Student
-        </p>
+          <h3>
+            Full Stack Developer | B.Tech Student
+          </h3>
 
-        <button>
-          View Projects
-        </button>
+          <p>
+            Passionate about building modern web applications using
+            React.js, Node.js and MongoDB.
+          </p>
+
+          <div className="hero-buttons">
+            
+            <a
+              href="https://github.com/prashanth-jatavath"
+              target="_blank"
+              rel="noreferrer"
+              className="btn secondary-btn"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
       </section>
 
+      {/* About Section */}
       <section id="about" className="section">
         <h2>About Me</h2>
 
         <p>
-          I am a passionate Full Stack Developer
-          interested in building modern web
-          applications using React.js and Node.js.
+          I am a B.Tech student interested in Full Stack Development,
+          Web Technologies and Problem Solving.
+        </p>
+
+        <p>
+          I enjoy building real-world projects and learning modern
+          technologies.
+        </p>
+
+        <p>
+          My goal is to become a skilled Software Developer and work
+          on impactful projects.
         </p>
       </section>
 
+      {/* Skills Section */}
       <section id="skills" className="section">
         <h2>Skills</h2>
 
-        <div className="skills">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>React.js</span>
-          <span>Node.js</span>
-          <span>MongoDB</span>
+        <div className="skills-container">
+          <div className="skill-card">React.js</div>
+          <div className="skill-card">Node.js</div>
+          <div className="skill-card">MongoDB</div>
+          <div className="skill-card">JavaScript</div>
+          <div className="skill-card">HTML</div>
+          <div className="skill-card">CSS</div>
+          <div className="skill-card">C</div>
+          <div className="skill-card">Java</div>
+          <div className="skill-card">Git</div>
+          <div className="skill-card">GitHub</div>
         </div>
       </section>
 
+      {/* Projects Section */}
       <section id="projects" className="section">
         <h2>Projects</h2>
 
-        <div className="project-card">
-          <h3>Interview Mentor</h3>
-          <p>
-            AI-powered technical interview
-            preparation platform.
-          </p>
-        </div>
+        <div className="projects-container">
+          <div className="project-card">
+            <h3>Smart Crime Reporting System</h3>
 
-        <div className="project-card">
-          <h3>Expert Booking System</h3>
-          <p>
-            Real-time expert session booking
-            application.
-          </p>
+            <p>
+              A full-stack web application for reporting and managing
+              crime complaints digitally.
+            </p>
+          </div>
+
+          <div className="project-card">
+            <h3>Interview Mentor</h3>
+
+            <p>
+              Technical interview preparation platform with guidance,
+              resources and preparation support.
+            </p>
+          </div>
+
+          <div className="project-card">
+            <h3>Real-Time Booking System</h3>
+
+            <p>
+              Booking platform with real-time session scheduling and
+              management.
+            </p>
+          </div>
+
+          <div className="project-card">
+            <h3>Portfolio Website</h3>
+
+            <p>
+              Personal portfolio built using React.js showcasing skills,
+              projects and contact details.
+            </p>
+          </div>
         </div>
       </section>
 
+      {/* Contact Section */}
       <section id="contact" className="section">
-        <h2>Contact</h2>
+        <h2>Contact Me</h2>
 
-        <input type="text" placeholder="Prashanth" />
-        <input type="email" placeholder="24x01a05g8@nrcmec.org" />
-        <textarea placeholder="give your best always"></textarea>
+        <div className="contact-info">
+          <p>Email: jatavathprashanthnaik@gmail.com</p>
 
-        <button>Send Message</button>
+          <p>
+            GitHub:
+            <a
+              href="https://github.com/prashanth-jatavath"
+              target="_blank"
+              rel="noreferrer"
+            >
+              github.com/prashanth-jatavath
+            </a>
+          </p>
+
+          <p>
+            LinkedIn:
+            <a
+              href="https://linkedin.com/in/prashanth-jatavath"
+              target="_blank"
+              rel="noreferrer"
+            >
+              linkedin.com/in/prashanth-jatavath
+            </a>
+          </p>
+        </div>
+
+        <form className="contact-form">
+          <input type="text" placeholder="Prashanth_JP" />
+
+          <input type="email" placeholder="jatavathprashanthnaik@gmail.com" />
+
+          <textarea
+            placeholder="Consistency and Hardworking"
+            rows="5"
+          ></textarea>
+
+          <button type="submit" className="btn">
+            Send Message
+          </button>
+        </form>
       </section>
-
     </div>
   );
 }
